@@ -72,8 +72,8 @@ spec:
   ports:
     - name: kaoto-frontendport
       protocol: TCP
-      port: 8180
-      targetPort: 8180
+      port: 8080
+      targetPort: 8080
   selector:
     app: kaoto-frontend
   sessionAffinity: None
@@ -90,7 +90,7 @@ spec:
   ports:
     - name: kaoto-backendport
       protocol: TCP
-      port: 80
+      port: 8081
       targetPort: 8081
   selector:
     app: kaoto-backend
@@ -114,7 +114,7 @@ spec:
               service:
                 name: kaoto-frontend-svc
                 port:
-                  number: 8180
+                  number: 8080
         
 ---
 apiVersion: networking.k8s.io/v1
@@ -134,4 +134,4 @@ spec:
               service:
                 name: kaoto-backend-svc
                 port:
-                  number: 80
+                  number: 8081
