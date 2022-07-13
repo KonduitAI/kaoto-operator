@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: kaoto-frontend
-          image: kaotoio/frontend:nightly
+          image: kaotoio/frontend:0.2.0
           ports:
             - name: port
               containerPort: 8080
@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: kaoto-backend
-          image: kaotoio/backend:nightly
+          image: kaotoio/backend:0.2.0
           ports:
             - name: port
               containerPort: 8081
