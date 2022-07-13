@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: kaoto-backend
-          image: kaotoio/backend:nightly
+          image: ghcr.io/konduitai/kaoto-backend
           ports:
             - name: port
               containerPort: 8081
